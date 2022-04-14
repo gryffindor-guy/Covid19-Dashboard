@@ -2,9 +2,15 @@
 
 This is the covid19 dashboard for the EY Techathon
 
-<img src='https://github.com/miteshtagadiya/Covid-19-Global-Dashboard/blob/master/src/assets/covid19Global.gif'>
+<img src='https://raw.githubusercontent.com/Bala534/Covid19-Dashboard/main/images/image3.png'>
+
+<img src='https://raw.githubusercontent.com/Bala534/Covid19-Dashboard/main/images/image2.jpeg'>
+
+<img src='https://raw.githubusercontent.com/Bala534/Covid19-Dashboard/main/images/image1.jpeg'>
 
 Dashboard created in ReactJS with ReCharts, React-Google-Charts, React-Simple-Maps, React-Table.
+
+We referred the template from https://github.com/miteshtagadiya/Covid-19-Global-Dashboard
 
 ## Designed and Developed by:
 

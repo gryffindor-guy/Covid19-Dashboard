@@ -256,8 +256,8 @@ class India extends Component {
               <NavigationBar
                 type="India"
                 ui={this.state.ui}
-                options={["Analytics", "Card", "Table", "Map"]}
-                optionRoutes={["/", "/card", "/table", "/map"]}
+                options={["Total Analytics","Percentage of vaccines to be supplied","State Wise Analytics","Map with districts","Vaccine delivery batches"]}
+                optionRoutes={["/","main","case","/map","vac"]}
                 onClick={(route) => {
                   this.setState({
                     ui: route,
@@ -287,6 +287,19 @@ class India extends Component {
                   }
                   changeChart={this.state.changeChart}
                 />
+              ) : null}
+              {this.state.ui === "case" ? (
+                <iframe src="https://analysis.geraabhishek.repl.co/" seamless="seamless" overflow-x="hidden"
+                overflow-Y="hidden" ref="nofollow" id="statewise" overflow="hidden" behaviour="smooth" block="nearest" inline="start" frameBorder="0" width="100%" height="900">
+                </iframe>
+              ) : null}
+              {this.state.ui === "vac" ? (
+                <iframe src="https://india-map.geraabhishek.repl.co/" seamless="seamless" overflow-x="hidden"
+                overflow-Y="hidden" ref="nofollow" id="statewise" overflow="hidden" behaviour="smooth" block="nearest" inline="start" frameBorder="0" width="100%" height="900">
+                </iframe>
+              ) : null}
+              {this.state.ui === "main" ? (
+                <iframe src="https://data.geraabhishek.repl.co/" background="black"  backgroundColor="transparent" ref="nofollow" id="statewise" frameBorder="0" width="100%" height="1200" borderRadius="20"></iframe> 
               ) : null}
               {this.state.ui === "/map" ? (
                 <div>

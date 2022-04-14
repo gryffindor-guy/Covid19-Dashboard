@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import SwitchBar from "../../../ui/SwitchBar/SwitchBar";
 import SimpleLineChart from "../../../charts/SimpleLineChart/SimpleLineChart";
-import Select from "react-select";
+import Select, { NonceProvider } from "react-select";
 import CustomChart from "../../../charts/PieChart/CustomChart";
 import GradientCardTitle from "../../../ui/GradientCardTitle/GradientCardTitle";
 import GradientCardFooter from "../../../ui/GradientCardFooter/GradientCardFooter";
@@ -27,7 +27,7 @@ class Analytics extends Component {
       });
       let filtered = sorted
         .filter((data) => data !== "Unassigned")
-        .slice(0, 10);
+        .slice(0, 5);
 
       toptenCities = filtered.map((city) => {
         return { name: city, ["Cases"]: data[city].confirmed };
@@ -225,6 +225,8 @@ class Analytics extends Component {
             })
         : [];
 
+        
+
     let Columns = [
       { type: "string", label: "name" },
       { type: "number", label: "value" },
@@ -391,19 +393,22 @@ class Analytics extends Component {
 
     return (
       <div className="row">
+        <iframe src="https://vm.di91.com/" ref="nofollow" id="statewise" scrolling="no" frameBorder="0" width="100%" height="700"></iframe>
         <div className="col-sm-12 col-12">
           <div
             style={{
               minHeight: 368,
-              background: "linear-gradient(to right, #d9a7c7, #fffcdc)",
+              /*background: "linear-gradient(to right, #d9a7c7, #fffcdc)",*/
+              background: "#111111",
               paddingBottom: 15,
               paddingLeft: 15,
               paddingTop: 30,
               borderRadius: 15,
               marginBottom: 15,
+              /*backgroundColor: "transparent",*/
             }}
           >
-            <GradientCardTitle title={"Top 10 cities by confirmed cases"} />
+            <GradientCardTitle title={"Top 5 cities by confirmed cases"} />
             <SimpleLineChart
               chart={"BarChart"}
               customTooltip={true}
@@ -417,13 +422,15 @@ class Analytics extends Component {
         <div className="col-sm-6 col-12">
           <div
             style={{
-              background: "linear-gradient(to right, #d9a7c7, #fffcdc)",
+              /*background: "linear-gradient(to right, #d9a7c7, #fffcdc)",*/
+              background: "#111111",
               paddingBottom: 15,
               minHeight: 368,
               paddingLeft: 15,
               paddingTop: 30,
               borderRadius: 15,
               marginBottom: 15,
+              /*backgroundColor: "transparent",*/
             }}
           >
             <GradientCardTitle title={"Total Confirmed and Active cases"} />
@@ -451,13 +458,15 @@ class Analytics extends Component {
         <div className="col-sm-6 col-12">
           <div
             style={{
-              background: "linear-gradient(to right, #d9a7c7, #fffcdc)",
+              /*background: "linear-gradient(to right, #d9a7c7, #fffcdc)",*/
+              background: "#111111",
               paddingBottom: 15,
               minHeight: 368,
               paddingLeft: 15,
               paddingTop: 30,
               borderRadius: 15,
               marginBottom: 15,
+              /*backgroundColor: "transparent",*/
             }}
           >
             <GradientCardTitle title={"Total Recovered cases and Deaths"} />
@@ -486,12 +495,14 @@ class Analytics extends Component {
           <div
             style={{
               minHeight: 390,
-              background: "linear-gradient(to right, #d9a7c7, #fffcdc)",
+              /*background: "linear-gradient(to right, #d9a7c7, #fffcdc)",*/
+              background: "#111111",
               paddingBottom: 15,
               paddingLeft: 15,
               paddingTop: 30,
               borderRadius: 15,
               marginBottom: 15,
+              /*backgroundColor: "transparent",*/
             }}
           >
             <GradientCardTitle
@@ -551,13 +562,15 @@ class Analytics extends Component {
         <div className="col-sm-6 col-12">
           <div
             style={{
-              background: "linear-gradient(to right, #d9a7c7, #fffcdc)",
+              /*background: "linear-gradient(to right, #d9a7c7, #fffcdc)",*/
+              background: "#111111",
               paddingBottom: 15,
               minHeight: 390,
               paddingLeft: 15,
               paddingTop: 30,
               borderRadius: 15,
               marginBottom: 15,
+              /*backgroundColor: "transparent",*/
             }}
           >
             <GradientCardTitle title={"Total cases in top 10 states"} />
@@ -587,12 +600,14 @@ class Analytics extends Component {
           <div
             style={{
               minHeight: 368,
-              background: "linear-gradient(to right, #d9a7c7, #fffcdc)",
+              /*background: "linear-gradient(to right, #d9a7c7, #fffcdc)",*/
+              background: "#111111",
               paddingBottom: 15,
               paddingLeft: 15,
               paddingTop: 30,
               borderRadius: 15,
               marginBottom: 15,
+              /*backgroundColor: "transparent",*/
             }}
           >
             <GradientCardTitle title={"Top 10 states by cases"} />
@@ -627,42 +642,20 @@ class Analytics extends Component {
           </div>
         </div>
 
-        <div className="col-sm-6 col-12">
-          <div
-            style={{
-              minHeight: 410,
-              background: "linear-gradient(to right, #d9a7c7, #fffcdc)",
-              paddingBottom: 15,
-              paddingLeft: 15,
-              paddingTop: 30,
-              borderRadius: 15,
-              marginBottom: 15,
-            }}
-          >
-            <GradientCardTitle title={"Patients count by age"} />
-            <SimpleLineChart
-              chart={"BarChart"}
-              customTooltip={true}
-              grid={false}
-              data={ageGroup}
-              labels={["Cases"]}
-              colors={["#192a56"]}
-            />
-            <GradientCardFooter
-              content={`*Awaiting details for ${unknown} patients.`}
-            />
-          </div>
-        </div>
+        
         <div className="col-sm-6 col-12">
           <div
             style={{
               minHeight: 368,
-              background: "linear-gradient(to right, #d9a7c7, #fffcdc)",
+              /*background: "linear-gradient(to right, #d9a7c7, #fffcdc)",*/
+              background: "#111111",
               paddingBottom: 15,
               paddingLeft: 15,
               paddingTop: 30,
               borderRadius: 15,
               marginBottom: 15,
+              /*backgroundColor: "transparent",*/
+              
             }}
           >
             <GradientCardTitle title={"Patients count by gender"} />
@@ -707,45 +700,17 @@ class Analytics extends Component {
             />
           </div>
         </div>
-        <div className="col-sm-6 col-12">
-          <div
-            style={{
-              minHeight: 368,
-              background: "linear-gradient(to right, #d9a7c7, #fffcdc)",
-              paddingBottom: 15,
-              paddingLeft: 15,
-              paddingTop: 30,
-              borderRadius: 15,
-              marginBottom: 15,
-            }}
-          >
-            <GradientCardTitle title={"Patients count by nationality"} />
+        
+        <iframe src="https://agepiechart.geraabhishek.repl.co/" background="black"  backgroundColor="transparent" ref="nofollow" id="statewise" scrolling="no" frameBorder="0" width="50%" height="400" borderRadius="20"></iframe>
+        <iframe src="https://plotlydeath.geraabhishek.repl.co/" background="black"  backgroundColor="transparent" ref="nofollow" id="statewise" scrolling="no" frameBorder="0" width="50%" height="400" borderRadius="20"></iframe>
+        <iframe src="https://recoveryrate.geraabhishek.repl.co/" background="black"  backgroundColor="transparent" ref="nofollow" id="statewise" scrolling="no" frameBorder="0" width="50%" height="400" borderRadius="20"></iframe>
+        <iframe src="https://deathrate.geraabhishek.repl.co/" background="black"  backgroundColor="transparent" ref="nofollow" id="statewise" scrolling="no" frameBorder="0" width="50%" height="400" borderRadius="20"></iframe>
+        <iframe src="https://map.mahesh2002.repl.co/" background="black"  backgroundColor="transparent" ref="nofollow" id="statewise" scrolling="no" frameBorder="0" width="100%" height="800" borderRadius="20"></iframe>
+        <iframe src="https://stackbarhorizontal.geraabhishek.repl.co/" background="black"  backgroundColor="transparent" ref="nofollow" id="statewise" scrolling="no" frameBorder="0" marginBottom="10" width="100%" height="800" borderRadius="20"></iframe>
+      
+        
+        
 
-            <SimpleLineChart
-              chart={"BarChart"}
-              customTooltip={true}
-              grid={false}
-              data={nationalityGroup}
-              labels={["Patients"]}
-              colors={["#192a56"]}
-            />
-            <GradientCardFooter
-              content={`*Awaiting details for ${
-                typeof countries.filter(
-                  (country) => Object.keys(country)[0] === ""
-                )[0] !== "undefined"
-                  ? Object.values(
-                      countries.filter(
-                        (country) => Object.keys(country)[0] === ""
-                      )[0]
-                    )[0]
-                  : countries.filter(
-                      (country) => Object.keys(country)[0] === ""
-                    )[0]
-              } patients.`}
-            />
-          </div>
-        </div>
       </div>
     );
   }

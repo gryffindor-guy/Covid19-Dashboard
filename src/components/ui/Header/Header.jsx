@@ -8,32 +8,18 @@ const Header = (props) => {
   return (
     <div>
       <div className="Header">
-        Covid-19 {props.dashboard} {props.width < 1024 ? "" : " Dashboard"}
-        <a
-          href="https://github.com/Bala534/Covid19-Dashboard"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src={Github} alt="github" className="github-icon" />
-        </a>
-      </div>
-      <div className="Switch-dashboard">
-        <img
-          onClick={() => props.history.push("/india")}
-          src={IndiaIcon}
-          alt="India"
-          className="india-icon"
-        />
-        <span style={{ fontWeight: "bold" }}>Switch</span>
-        <img
-          onClick={() => props.history.push("/")}
-          src={World}
-          alt="World"
-          className="global-icon"
-        />
-        
+        Covid-19 {props.dashboard} Visualization Dashboard {props.width < 1024 ? "" : " Dashboard"}
+        <img style={{
+          height: 50,
+          borderRadius: 50,
+        }} src='https://st.depositphotos.com/1005534/1256/v/600/depositphotos_12563658-stock-illustration-india-flag-glossy-button.jpg' />
 
       </div>
+      
+        
+        
+
+      
     </div>
   );
 };

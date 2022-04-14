@@ -11,10 +11,13 @@ class NumericCard extends Component {
 
   render() {
     const colors = {
-      Confirmed: "#448AFF",
-      Active: "#F9A825",
+      Confirmed: "orange",  
+      /*Active: "#F9A825",
       Recovered: "#4CAF50",
-      Deaths: "#FF5252",
+      Deaths: "#FF5252",*/
+      Active: "#9D2EFF",
+      Recovered: "#2C54D1",
+      Deaths: "#FF4D85"
     };
 
     return (
@@ -38,7 +41,8 @@ class NumericCard extends Component {
               <div
                 className="card"
                 style={{
-                  background: colors[Object.keys(card)[0]],
+                  /*background: colors[Object.keys(card)[0]],*/
+                  background: "orange",
                 }}
               >
                 <div

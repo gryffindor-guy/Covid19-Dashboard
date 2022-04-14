@@ -1,5 +1,6 @@
 .India {
-  background: #172852;
+  /*background:  #172852;*/
+  background: #161616;
   color: #fff;
   height: 100vh;
   overflow-y: scroll;
@@ -53,10 +54,10 @@
   padding: 5px 20px;
   border-radius: 5px;
 }
-.India .timer-date {
+/*.India .timer-date {
   position: absolute;
   margin-top: -28px;
   right: 45px;
   color: #404b69;
   font-weight: bold;
-}
+}*/
