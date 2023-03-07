@@ -17,9 +17,9 @@ We referred the template from https://github.com/miteshtagadiya/Covid-19-Global-
 ### Team Fusion:
 
 <ul>
+  <li>Muddam Hema Sankara Sai Ganesh Babu</li>
   <li>Juttiga Mounika</li>
   <li>Chikkala Pavitra</li>
   <li>Chilakala Bala Mahesh</li>
-  <li>Muddam Hema Sankara Sai Ganesh Babu</li>
   <li>Gera Abhishek</li>
 <ul>
